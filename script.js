@@ -18,17 +18,13 @@ function ThemeToggle() {
 
 //reduces money by cost of printer and increments printer.
 var AutoPrinterCost = 10;
-var NewAutoPrinterCost;
 document.getElementById('AutoPrinterCost').innerHTML = AutoPrinterCost;
 function BuyAutoPrinter() {
   if (money >= AutoPrinterCost) {
     money = money - AutoPrinterCost;
-  } else {
-    document.getElementbyId('CantAffordPrinter').innerHTML =
-      "You can't afford an Auto Printer!";
-  }
+    AutoPrinters = AutoPrinters + 1;
+  } 
   document.getElementById('TotalMoney').innerHTML = money;
-  AutoPrinters = AutoPrinters + 1;
-  z = AutoPrinters.toString();
-  document.getElementById('TotalAutoPrinters').innerText = z;
+  document.getElementById('AutoPrinterCost').innerHTML = AutoPrinterCost;
+  document.getElementById('TotalAutoPrinters').innerHTML = AutoPrinters;
 }
