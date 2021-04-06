@@ -1,9 +1,14 @@
 h1 {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
   text-align: center;
   margin: 0px;
 }
-h2 {
+.money:hover {
+  color: green;
+  transition: all 0.5s linear;
+}
+.autoprinters {
   font-family: 'Courier New', Courier, monospace;
   font-size: xx-large;
   position: absolute;
@@ -11,38 +16,61 @@ h2 {
   top: 150px;
   margin: 0px;
 }
+body {
+  background-color: #f8f8ff;
+  color: #2C2F33;
+}
 .printmoney {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  text-align: center;
   border-color: black;
   border-radius: 10px;
+  border-width: 4px;
+  width: 150px;
+  height: 30px;
   position: absolute;
-  right: 600px;
-  top: 80px;
+  right: 560px;
+  top: 60px;
+}
+.printmoney:hover {
+  border-color: green;
+  transition: all 0.5s linear;
 }
 .themetoggle {
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 16px;
   border-color: black;
   border-radius: 10px;
+  border-width: 4px;
+  width: 150px;
+  height: 30px;
   position: absolute;
   right: 10px;
   top: 10px;
 }
-.theme-toggle {
-  background-color: black;
-  color: white;
+.themetoggle:hover {
+  border-color: green;
+  transition: all 0.5s linear;
 }
-.autoprinter {
+.theme-toggle {
+  background-color: #2C2F33;
+  color: #f8f8ff;
+}
+.buyautoprinter {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
   border-color: black;
   border-radius: 10px;
+  border-width: 4px;
+  width: 250px;
+  height: 40px;
   position: absolute;
-  right: 50px;
+  right: 10px;
   top: 150px;
 }
-.cantaffordprinter {
-  font-family: 'Courier New', Courier, monospace;
-  color: red;
-  position: absolute;
-  right: 50px;
-  top: 130px;
+.buyautoprinter:hover {
+  border-color: green;
+  transition: all 0.5s linear;
 }
