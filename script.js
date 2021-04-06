@@ -1,6 +1,31 @@
+//setting up the variables for ease of reference
+var money = ""
+var AutoPrinters = ""
 //playerData for saves.
-var money = " "
-var AutoPrinters = " "
+function saveGame() {
+  var playerData = {
+    money: money,
+    AutoPrinters: AutoPrinters
+  }
+  //stringifying the player data for JSON.
+  localStorage.setItem("playerData",JSON.stringify(playerData));
+}
+
+//setting up a loading function.
+function loadGame() {
+var gamesave = JSON.parse(localStorage.getItem("playerData"));
+//future-proofing old saves
+if (typeof gamesave.money !== "undefined") {
+  money = gamesave.money;
+}
+if (typeof gamesave.AutoPrinters !== "undefined") {
+  AutoPrinters = gamesave.AutoPrinters;
+}
+}
+//function used to delete the player's save.
+function saveKill() {
+  localStorage.removeItem("playerData");
+}
 
 //displaying stuff.
 document.getElementById('TotalMoney').innerHTML = money;
@@ -41,12 +66,4 @@ setInterval(function() {
 document.getElementById('TotalMoney').innerHTML = money;
 document.getElementById('AutoPrinterCost').innerHTML = AutoPrinterCost;
 document.getElementById('TotalAutoPrinters').innerHTML = AutoPrinters;
-
-
-
-
-
-
-
-
-
+loadGame();
