@@ -30,8 +30,9 @@ body {
   width: 150px;
   height: 30px;
   position: absolute;
-  right: 560px;
-  top: 60px;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .printmoney:hover {
   border-color: green;
