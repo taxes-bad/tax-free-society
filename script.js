@@ -1,5 +1,6 @@
 //playerData for saves.
-var playerData = [(money = ""), (AutoPrinters = "")];
+var money = " "
+var AutoPrinters = " "
 
 //displaying stuff.
 document.getElementById('TotalMoney').innerHTML = money;
