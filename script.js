@@ -1,5 +1,11 @@
-//playerData for saves.
-var playerData = [(money = ""), (AutoPrinters = "")];
+//player data for saves.
+function saveGame() {
+  var playerData = {
+    money: money,
+    AutoPrinters: AutoPrinters
+  }
+  localStorage.setItem("playerData", JSON.stringify(playerData));
+}
 
 //displaying stuff.
 document.getElementById('TotalMoney').innerHTML = money;
