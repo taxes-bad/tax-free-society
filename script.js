@@ -1,16 +1,17 @@
 //playerData for saves.
-var playerData = [(money = 10), (AutoPrinters = 0)];
+var playerData = [(money = ""), (AutoPrinters = "")];
 
-//Displaying stuff.
+//displaying stuff.
 document.getElementById('TotalMoney').innerHTML = money;
+document.getElementById('TotalAutoPrinters').innerHTML = AutoPrinters;
 
-//Incrementing the money and illegal money.
+//incrementing the money and illegal money.
 function getrich() {
   money++;
   document.getElementById('TotalMoney').innerHTML = money;
 }
 
-//Toggles between Dark and Light mode. (ew light mode).
+//toggles between Dark and Light mode. (ew light mode).
 function ThemeToggle() {
   var element = document.body;
   element.classList.toggle('theme-toggle');
@@ -22,9 +23,29 @@ document.getElementById('AutoPrinterCost').innerHTML = AutoPrinterCost;
 function BuyAutoPrinter() {
   if (money >= AutoPrinterCost) {
     money = money - AutoPrinterCost;
-    AutoPrinters = AutoPrinters + 1;
-  } 
-  document.getElementById('TotalMoney').innerHTML = money;
-  document.getElementById('AutoPrinterCost').innerHTML = AutoPrinterCost;
-  document.getElementById('TotalAutoPrinters').innerHTML = AutoPrinters;
+    AutoPrinters++;
+    AutoPrinterCost = Math.round(AutoPrinterCost * 1.5);
+    document.getElementById('TotalMoney').innerHTML = money;
+    document.getElementById('TotalAutoPrinters').innerHTML = AutoPrinters;
+    document.getElementById('AutoPrinterCost').innerHTML = AutoPrinterCost;
+  }
 }
+
+//making the auto printers automatically print money.
+setInterval(function() {
+  money = money + AutoPrinters, document.getElementById('TotalMoney').innerHTML = money
+} , 1000)
+//1000ms = 1 second
+
+document.getElementById('TotalMoney').innerHTML = money;
+document.getElementById('AutoPrinterCost').innerHTML = AutoPrinterCost;
+document.getElementById('TotalAutoPrinters').innerHTML = AutoPrinters;
+
+
+
+
+
+
+
+
+
