@@ -13,14 +13,16 @@ function saveGame() {
 
 //setting up a loading function.
 function loadGame() {
-var gamesave = JSON.parse(localStorage.getItem("playerData"));
-//future-proofing old saves
-if (typeof gamesave.money !== "undefined") {
-  money = gamesave.money;
-}
-if (typeof gamesave.AutoPrinters !== "undefined") {
-  AutoPrinters = gamesave.AutoPrinters;
-}
+  var gamesave = JSON.parse(localStorage.getItem("playerData"));
+  //future-proofing old saves
+  if (typeof gamesave.money !== "undefined") {
+    money = gamesave.money;
+  }
+  if (typeof gamesave.AutoPrinters !== "undefined") {
+    AutoPrinters = gamesave.AutoPrinters;
+  }
+  document.getElementById('TotalMoney').innerHTML = money;
+  document.getElementById('TotalAutoPrinters').innerHTML = AutoPrinters;
 }
 //function used to delete the player's save.
 function saveKill() {
@@ -67,3 +69,12 @@ document.getElementById('TotalMoney').innerHTML = money;
 document.getElementById('AutoPrinterCost').innerHTML = AutoPrinterCost;
 document.getElementById('TotalAutoPrinters').innerHTML = AutoPrinters;
 loadGame();
+
+
+
+
+
+
+
+
+
