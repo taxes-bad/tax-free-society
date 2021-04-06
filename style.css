@@ -6,13 +6,13 @@ h1 {
 }
 .money:hover {
   color: green;
-  transition: all 0.5s linear;
+  transition: all 0.25s linear;
 }
 .autoprinters {
   font-family: 'Courier New', Courier, monospace;
   font-size: xx-large;
   position: absolute;
-  left: 10px;
+  left: 0.5%;
   top: 150px;
   margin: 0px;
 }
@@ -36,7 +36,6 @@ body {
 }
 .printmoney:hover {
   border-color: green;
-  transition: all 0.5s linear;
 }
 .themetoggle {
   font-family: 'Courier New', Courier, monospace;
@@ -48,16 +47,63 @@ body {
   width: 150px;
   height: 30px;
   position: absolute;
-  right: 10px;
+  right: 0.25%;
   top: 10px;
 }
 .themetoggle:hover {
   border-color: green;
-  transition: all 0.5s linear;
 }
 .theme-toggle {
   background-color: #2C2F33;
   color: #f8f8ff;
+}
+.savegame {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 16px;
+  border-color: black;
+  border-radius: 10px;
+  border-width: 4px;
+  width: 150px;
+  height: 30px;
+  position: absolute;
+  left: 0.25%;
+  top: 10px;
+}
+.savegame:hover {
+  border-color:rgb(0, 130, 130);
+}
+.loadgame {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 16px;
+  border-color: black;
+  border-radius: 10px;
+  border-width: 4px;
+  width: 150px;
+  height: 30px;
+  position: absolute;
+  left: 0.25%;
+  top: 40px;
+}
+.loadgame:hover {
+  border-color:green
+}
+.savekill {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  font-size: 16px;
+  border-color: black;
+  border-radius: 10px;
+  border-width: 4px;
+  width: 150px;
+  height: 30px;
+  position: absolute;
+  left: 0.25%;
+  top: 70px;
+}
+.savekill:hover {
+  border-color:red;
 }
 .buyautoprinter {
   font-family: 'Courier New', Courier, monospace;
@@ -68,10 +114,16 @@ body {
   width: 250px;
   height: 40px;
   position: absolute;
-  right: 10px;
+  right: 0.25%;
   top: 150px;
 }
 .buyautoprinter:hover {
   border-color: green;
-  transition: all 0.5s linear;
 }
+
+/*font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  left or right: 0.5%;
+  top: x %;
+  margin: 0px;
+  useful format*\
