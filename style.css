@@ -23,20 +23,17 @@ body {
 }
 .printmoney {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
-  border-color: black;
+  border-color: green;
   border-radius: 10px;
   border-width: 4px;
-  width: 150px;
-  height: 30px;
+  width: 160px;
+  height: 40px;
   position: absolute;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.printmoney:hover {
-  border-color: green;
 }
 .themetoggle {
   font-family: 'Courier New', Courier, monospace;
