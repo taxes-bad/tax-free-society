@@ -6,7 +6,7 @@
     <title>Incremental Revenue Service</title>
     <link rel = "stylesheet" href = "style.css">
 </head>
-<body class="theme-toggle">
+<body class="theme-toggle" onload="loadGame()">
     <h1><h class="money">(Illegally Earned) Money:</h> <span id="TotalMoney"></span></h1>
     <h2 class="autoprinters">Auto Printers: <span id="TotalAutoPrinters"></span></h2>
     <button class ="printmoney" onclick="getrich()">Print Money</button>
@@ -14,8 +14,19 @@
     <button class="savegame" onclick="saveGame()">Save Game</button>
     <button class="loadgame" onclick="loadGame()">Load Game</button>
     <button class="savekill" onclick="saveKill()">Delete Save</button>
-    <button id="BuyAutoPrinterButton"class="buyautoprinter" onclick="BuyAutoPrinter()">Buy An Auto Printer For: 
+
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p class="modalText">While You Were Offline, You Gained: <span id="modalText"></span></p>
+  </div>
+
+</div>
+    <button id="BuyAutoPrinterButton" class="buyautoprinter" onclick="BuyAutoPrinter()">Buy An Auto Printer For: 
     <span id=AutoPrinterCost> </span> </button>
 </body>
-<script src="script.js"></script>
+<script src="Javascript/script.js"></script>
+<script src="Javascript/themetoggle.js"></script>
+<script src="Javascript/saveload.js"></script>
+<script src="Javascript/auto.js"></script>
 </html>
