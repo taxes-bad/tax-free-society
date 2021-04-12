@@ -25,7 +25,8 @@ body {
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   text-align: center;
-  border-color: green;
+  text-color: #ffffff;
+  border-color: #008000;
   border-radius: 10px;
   border-width: 4px;
   width: 160px;
