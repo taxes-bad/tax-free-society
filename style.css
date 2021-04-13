@@ -20,36 +20,44 @@ h1 {
 body {
   background-color: #F4F4F6;
   color: #2C2F33;
+  transition: background-color 0.5s ease, color 1s ease;
 }
 .printmoney {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-size: 1.2rem;
   text-align: center;
-  border-color: green;
+  border-color: black;
   border-radius: 10px;
-  border-width: 4px;
+  border-width: 2px;
   width: 160px;
   height: 40px;
+  transition: background-color 0.5s ease-out;
   position: absolute;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.printmoney:hover {
+  background-color: green;
+}
 .themetoggle {
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
   font-size: 16px;
+  background-color: #F4F4F6;
   border-color: black;
   border-radius: 10px;
-  border-width: 4px;
+  border-width: 2px;
   width: 150px;
   height: 30px;
+  transition: background-color 0.5s ease-out;
   position: absolute;
   right: 0.25%;
   top: 10px;
 }
 .themetoggle:hover {
-  border-color: green;
+  background-color: #2C2F33;
+  color: #F4F4F6;
 }
 .theme-toggle {
   background-color: #2C2F33;
@@ -62,15 +70,16 @@ body {
   border-color: black;
   color:rgb(39, 39,39);
   border-radius: 10px;
-  border-width: 4px;
+  border-width: 2px;
   width: 150px;
   height: 30px;
+  transition: background-color 0.5s ease-out;
   position: absolute;
   left: 0.25%;
   top: 10px;
 }
 .savegame:hover {
-  border-color:rgb(0, 130, 130);
+  background-color:rgb(0, 130, 130);
 }
 .loadgame {
   font-family: 'Courier New', Courier, monospace;
@@ -79,15 +88,16 @@ body {
   border-color: black;
   color:rgb(39, 39,39);
   border-radius: 10px;
-  border-width: 4px;
+  border-width: 2px;
   width: 150px;
   height: 30px;
+  transition: background-color 0.5s ease-out;
   position: absolute;
   left: 0.25%;
   top: 40px;
 }
 .loadgame:hover {
-  border-color:green
+  background-color:green
 }
 .savekill {
   font-family: 'Courier New', Courier, monospace;
@@ -96,31 +106,72 @@ body {
   border-color: black;
   color:rgb(39, 39,39);
   border-radius: 10px;
-  border-width: 4px;
+  border-width: 2px;
   width: 150px;
   height: 30px;
+  transition: background-color 0.5s ease-out;
   position: absolute;
   left: 0.25%;
   top: 70px;
 }
 .savekill:hover {
-  border-color:red;
+  background-color: red;
 }
 .buyautoprinter {
   font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
   border-color: black;
   border-radius: 10px;
-  border-width: 4px;
+  border-width: 2px;
   width: 250px;
   height: 40px;
+  transition: background-color 0.25s ease-out;
   position: absolute;
   right: 0.25%;
   top: 150px;
 }
 .buyautoprinter:hover {
-  border-color: green;
+  background-color: #aaaaaa;
+  color: #000;
 }
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+.modal-content {
+  background-color:#E5E9EC;
+  color: black;
+  font-family: 'Inconsolata', monospace;
+  font-size: 36px;
+  font-weight: 300;
+  text-align: center;
+  margin: auto;
+  padding: 0px;
+  border: 5px solid green;
+  width: 80%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /*font-family: 'Courier New', Courier, monospace;
   position: absolute;
   left or right: 0.5%;

@@ -1,9 +1,7 @@
 //player data
-var playerData = {
-  money: money,
-  AutoPrinters: AutoPrinters,
-  AutoPrinterCost: AutoPrinterCost,
-}
+var money = "";
+var AutoPrinters = "";
+var AutoPrinterCost = 10;
 
 //incrementing the money and illegal money.
 function getrich() {
