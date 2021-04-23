@@ -19,6 +19,16 @@ function saveGame() {
   localStorage.setItem("playerData", JSON.stringify(playerData));
 }
 
+var autoSave = window.setInterval(function() {
+  var playerData = {
+    money: money,
+    AutoPrinters: AutoPrinters,
+    AutoPrinterCost: AutoPrinterCost
+  }
+  //stringifying the player data for JSON.
+  localStorage.setItem("playerData", JSON.stringify(playerData));
+}, 2000);
+
 //setting up a loading function.
 function loadGame() {
   var gamesave = JSON.parse(localStorage.getItem("playerData"));
