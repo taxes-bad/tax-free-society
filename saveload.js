@@ -43,9 +43,9 @@ window.onload = loadGame();
 //function used to delete the player's save.
 function saveKill() {
   let saveKillPrompt = prompt(
-    "Are you sure? Type 'I am a Tax Evader' (case sensitive) if you are confident that you wish to delete your save."
+    "Are you sure? Type 'delete save' if you are confident that you wish to delete your save."
   )
-  if (saveKillPrompt == "I am a Tax Evader") {
+  if (saveKillPrompt.toLowerCase() == "delete save") {
     money = "";
     AutoPrinters = "";
     AutoPrinterCost = 10;
