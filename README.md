@@ -1,1 +1,1 @@
-# This is the repository for *Incremental Revenue Service*.
+# This is the repository for *Demo Incremental*.
